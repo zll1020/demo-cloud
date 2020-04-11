@@ -1,0 +1,16 @@
+server:
+  port: 8000
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    data: classpath:data.sql
+    platform: h2
+    schema: classpath:schema.sql
+Spring:
+  main:
+    allow-bean-definition-overriding: true
+
