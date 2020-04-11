@@ -10,6 +10,8 @@ spring:
     data: classpath:data.sql
     platform: h2
     schema: classpath:schema.sql
+  application:
+    name: user-provider
 Spring:
   main:
     allow-bean-definition-overriding: true
@@ -20,3 +22,12 @@ management:
       exposure:
         include: "*"
         exclude: env
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+
