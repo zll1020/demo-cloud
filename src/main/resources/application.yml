@@ -14,3 +14,9 @@ Spring:
   main:
     allow-bean-definition-overriding: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: env
